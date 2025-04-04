@@ -72,6 +72,8 @@ NEW:
 + Added sync anime with myanimelist
 + Added user remove watch progress
 + Added safeGetByQuery in each ModelService
++ Added MyAnimeList API integration (2.1.0)
++ Added MyAnimeList fetch seasonal anime util (2.1.0)
 
 - Refactored handlers into single-purpose utils
 - Refactored architecture (renamed files n folders)
@@ -98,6 +100,7 @@ NEW:
 - Fixed $api Axios instance ECONNRESET error
 - Fixed ```secondsToReadable``` breaks on hours (in pretty return H:[empty])
 - Fixed nekoplayer watch progress. Add sync on path & visibility changes & add full progress remove
+- Fixed episodes uploading (2.1.0)
 
 + Disabled online poll & watch together
 
