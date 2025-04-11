@@ -88,6 +88,7 @@ NEW:
 
 #### nekomi-nextjs
 + Added Anime API integration
++ Added nekoplayer continue episode progress preload (2.1.0)
 
 + Updated interactions with Anime API & GET /user
 + Updated user profile, home page & Client-Server logic
@@ -96,11 +97,13 @@ NEW:
 + Updated nekoplayer (was kekwplayer) UI & logics
 + Updated @fullkekw/fkw-popup package to the latest version
 + Updated contacts page
++ Updated watch page ui (2.1.0)
 
 - Fixed $api Axios instance ECONNRESET error
 - Fixed ```secondsToReadable``` breaks on hours (in pretty return H:[empty])
 - Fixed nekoplayer watch progress. Add sync on path & visibility changes & add full progress remove
 - Fixed episodes uploading (2.1.0)
+- Fixed player does not update user watch progress if he not natively pause/play (2.1.0)
 
 + Disabled online poll & watch together
 
