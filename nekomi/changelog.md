@@ -2,18 +2,60 @@
 
 [back](../README.md)
 
-- [Patch 2.1.0](#patch-210)
+- [Patch 2.1.1](#patch-211)
   - [API](#api)
     - [nekomi-api](#nekomi-api)
-    - [nekomi-uploads](#nekomi-uploads)
-    - [nekomi-media](#nekomi-media)
   - [INFRASTRUCTURE](#infrastructure)
     - [nekomi-api](#nekomi-api-1)
     - [nekomi-nextjs](#nekomi-nextjs)
+- [Patch 2.1.0](#patch-210)
+  - [API](#api-1)
+    - [nekomi-api](#nekomi-api-2)
+    - [nekomi-uploads](#nekomi-uploads)
+    - [nekomi-media](#nekomi-media)
+  - [INFRASTRUCTURE](#infrastructure-1)
+    - [nekomi-api](#nekomi-api-3)
+    - [nekomi-nextjs](#nekomi-nextjs-1)
     - [nekomi-uploads](#nekomi-uploads-1)
     - [nekomi-media](#nekomi-media-1)
     - [nekomi-bot](#nekomi-bot)
     - [nginx](#nginx)
+
+---------------------------------------------------------------
+
+## Patch 2.1.1
+
+### API
+#### nekomi-api
+
++ Removed parseTogetherRoom from GET /user/:query
++ Removed GET /user/validate
++ Removed POST /user/together
++ Removed DELETE /user/together/:id
++ Renamed PATCH /user/me into /user
++ Renamed GET /user/linkTelegram/token into /user/link/telegram/token
++ Renamed GET /user/linkTelegram into /user/link/telegram
++ Renamed GET /user/linkTelegram/verify into /user/link/telegram/verify
++ Removed ?metadataOnly from each endpoint
+
+### INFRASTRUCTURE
+#### nekomi-api
++ Added fix user lib anime documents (some users may have unavailable anime documents it their libs)
++ Refactored anime & user controllers, user model
++ Reworked errors throwing
++ Reworked anime service & user model tests
++ Reworked Routes
++ Fixed general development issues
++ Fixed user avatar / username sync with fullkekw-sso
++ Fixed failing myanimelist sync on client request (sync calls on both main and metadataOnly requests)
+
+#### nekomi-nextjs
++ Reworked CSRF token forgery
++ Reworked header / mobile menus
++ Migrated @fullkekw/fkw-popup to @fullkekw/popup
++ Optimized page loading by removing jsrassing lib
++ Fixed general development issues
++ Fixed logout on session expire
 
 ---------------------------------------------------------------
 
@@ -30,6 +72,7 @@ Patch 2.1.0 touches everything that belongs to nekomi Anime (was Title) model & 
 - GET /user/:query ```parseRoles``` now ```parseCapabilities```
 - GET /dubber/all **removed**, use /dubber/search?q=~all instead
 - PATCH /anime/:uuid is now PATCH /anime. UUID property moved in body
+- GET /anime/all renamed into /anime/stats (old routes will be removed in 2.1.1)
 
 #### nekomi-uploads
 - Added GET /:id method
@@ -82,6 +125,7 @@ NEW:
 - Reworked Mocking & testing
 - Reworked error codes in enums, turn more errors into generic
 - Reworked Anime Service, write tests for each **set** method
+- Fixed anime stats (was /all) updated (2.1.0)
 
 + Removed deprecated code
 + Disabled online poll & watch together
@@ -104,6 +148,8 @@ NEW:
 - Fixed nekoplayer watch progress. Add sync on path & visibility changes & add full progress remove
 - Fixed episodes uploading (2.1.0)
 - Fixed player does not update user watch progress if he not natively pause/play (2.1.0)
+- Fixed patcher anime stats (2.1.0) & patcher search open anime by slug and not uuid
+- Fixed watch page display zero uploaded episodes
 
 + Disabled online poll & watch together
 

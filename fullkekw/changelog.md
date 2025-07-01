@@ -49,6 +49,7 @@
 + Patch username cooldown has been reduced from 30d to 7d
 + Default avatars are now static. Old default avatars that have been removed: 05ba8cc3-3ede-420c-bc0a-2f6ae663b74f, 1ea43878-36f0-416f-9f02-0b6eed54e411 
 + Rewritted tests
++ Fixed VersionError on sessions update (GET /auth/refresh) (2.1.1)
 
 #### fk-authority
 
