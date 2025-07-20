@@ -2,19 +2,38 @@
 
 [back](../README.md)
 
+- [Patch 2.1.2](#patch-212)
+  - [INFRASTRUCTURE](#infrastructure)
+    - [fullkekw-authority](#fullkekw-authority)
+    - [fullkekw-userapi](#fullkekw-userapi)
 - [Patch 2.1.1](#patch-211)
   - [API](#api)
     - [fullkekw-account-nextjs](#fullkekw-account-nextjs)
-    - [fullkekw-userapi](#fullkekw-userapi)
-  - [INFRASTRUCTURE](#infrastructure)
-    - [fullkekw-account-nextjs](#fullkekw-account-nextjs-1)
     - [fullkekw-userapi](#fullkekw-userapi-1)
+  - [INFRASTRUCTURE](#infrastructure-1)
+    - [fullkekw-account-nextjs](#fullkekw-account-nextjs-1)
+    - [fullkekw-userapi](#fullkekw-userapi-2)
     - [fk-authority](#fk-authority)
 - [Patch 2.1.0](#patch-210)
-  - [INFRASTRUCTURE](#infrastructure-1)
+  - [INFRASTRUCTURE](#infrastructure-2)
     - [fk-usapi](#fk-usapi)
 
 ---------------------------------------------------------------
+
+## Patch 2.1.2
+
+### INFRASTRUCTURE
+#### fullkekw-authority
+
++ Added .env to replace old service config
++ Added ci/cd
++ Dockerized
+
+#### fullkekw-userapi
+
++ Added .env to replace old service config
++ Added ci/cd
++ Dockerized
 
 ## Patch 2.1.1
 
